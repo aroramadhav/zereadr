@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QuicRead Reader</title>
+  <style>
+    body { background: #181818; color: #fff; margin: 0; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+    #rsvpBox { font-size: 2.5em; background: #222; padding: 0.5em 2em; border-radius: 12px; margin-bottom: 1em; text-align: center; min-width: 300px; min-height: 1.5em; }
+    #controls { margin-top: 1em; }
+    #settingsBtn { background: none; border: none; color: #aaa; font-size: 1.5em; cursor: pointer; opacity: 0.7; }
+    #settingsBtn:hover { opacity: 1; }
+  </style>
+</head>
+<body>
+  <div id="mainContent" style="width: 90vw; max-width: 900px; margin: 0 auto; background: #232323; color: #eee; padding: 2em 2em 6em 2em; border-radius: 16px; min-height: 200px; overflow-y: auto; box-shadow: 0 2px 16px #0008;">
+    <h2 style="margin-top:0;">Extracted Text</h2>
+    <div id="textDisplay" style="white-space: pre-wrap; line-height: 1.7; font-size: 1.1em;"></div>
+  </div>
+  <div id="rsvpOverlay" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; pointer-events: none;">
+    <div id="rsvpBox" style="font-size: 2.5em; background: #222; padding: 0.5em 2em; border-radius: 12px; text-align: center; min-width: 300px; min-height: 1.5em; color: #fff; box-shadow: 0 2px 16px #0008; opacity: 0.97; pointer-events: auto;">Ready...</div>
+  </div>
+  <div id="controls">
+    <button id="startBtn">Start</button>
+    <button id="pauseBtn" style="display:none;">Pause</button>
+    <label for="wpmInput">WPM:</label>
+    <input type="number" id="wpmInput" min="100" max="1000" value="300" style="width:60px;">
+    <button id="settingsBtn">⚙️</button>
+  </div>
+  <script src="reader.js"></script>
+</body>
+</html>

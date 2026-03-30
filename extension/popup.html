@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QuicRead</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 1em; width: 300px; }
+    #startBtn, #stopBtn { margin: 0.5em 0; }
+    #wpmSlider { width: 100%; }
+  </style>
+</head>
+<body>
+  <h2>QuicRead</h2>
+  <button id="startBtn">Start Reader</button>
+  <button id="stopBtn" style="display:none;">Stop</button>
+  <div>
+    <label for="wpmSlider">WPM: <span id="wpmValue">300</span></label>
+    <input type="range" id="wpmSlider" min="100" max="1000" value="300">
+  </div>
+  <div>
+    <button id="settingsBtn">⚙️ Settings</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
